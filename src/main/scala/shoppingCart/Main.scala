@@ -15,5 +15,9 @@ object Main {
 
     println("Total Cost : £" + TotalCost.getTotalCost(items))
 
+
+    //Step 2 - Displaying Total Cost with simple offers
+
+    println("Total Cost With Offers :  £" + TotalCostWithOffers.getTotalCostWithOffer(items))
   }
 }
