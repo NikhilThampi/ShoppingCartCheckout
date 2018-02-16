@@ -20,25 +20,6 @@ class TestTotalCost extends FlatSpec {
     assert(TotalCost.getPrice("aPPle") === 0.6)
   }
 
-  //Test function that finds count of an item from items list
-  "Count of Apple" should "be 3" in {
-
-    val Items = List("Apple", "Apple", "Orange", "Apple", "Orange", "Orange", "Orange")
-    assert(TotalCost.getNoOfItems(Items, "Apple") === 3)
-  }
-
-  "Count of Orange" should "be 4" in {
-
-    val Items = List("Apple", "Apple", "Orange", "Apple", "Orange", "Orange", "Orange")
-    assert(TotalCost.getNoOfItems(Items, "Orange") === 4)
-  }
-
-  "Count of an item (eg:orange) irrespective of case" should "be 4" in {
-
-    val Items = List("Apple", "Apple", "ORange", "Apple", "Orange", "ORANGE", "Orange")
-    assert(TotalCost.getNoOfItems(Items, "Orange") === 4)
-  }
-
   // Checks Total Cost when the input is empty
 
   "Total cost when input empty" should " be 0.00" in {

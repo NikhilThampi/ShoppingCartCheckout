@@ -17,9 +17,15 @@ object TotalCostWithOffers {
     val distinctItems = items.distinct
 
 
+    //Function to get number of items
+
+    def getNoOfItems(items: List[String], item: String): Int = {
+      items.count(p => p.equalsIgnoreCase(item))
+    }
+
     //Total savings with offer = sum of offer calculation of each distinct item
 
-    val totalSavingsWithOffer = items.distinct.map(item => CalculateOffer(item, TotalCost.getNoOfItems(items, item), TotalCost.getPrice(item))).sum
+    val totalSavingsWithOffer = items.distinct.map(item => CalculateOffer(item, getNoOfItems(items, item), TotalCost.getPrice(item))).sum
 
     // total cost with offer = Cost calculated without offer for all items - total amount saved by offer for offer items
 

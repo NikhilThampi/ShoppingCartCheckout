@@ -14,19 +14,13 @@ object TotalCost {
     priceMap.getOrElse(item.toLowerCase, 0.0).toDouble
   }
 
-  //Function to get number of items
-
-  def getNoOfItems(items: List[String], item: String): Int = {
-    items.count(p => p.equalsIgnoreCase(item))
-  }
 
   //Function to find the total cost
 
   def getTotalCost(items: List[String]): Double = {
 
-    // Total Cost = sum of (Number of items * price of one)
 
-    val totalCost = items.distinct.map(item => getNoOfItems(items, item) * getPrice(item)).sum
+    val totalCost = items.map(item => getPrice(item)).sum
 
     //returns Total cost rounded value
 

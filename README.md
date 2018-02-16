@@ -30,9 +30,8 @@ Solution-:
   
       a) map function to assign item price to item
       b) Function to get price for an item
-      c) Function to get the count of each input item
       d) Function to calculate total cost by summing up the cost of each distinct item from the list.
-         (cost of each distinct item = price * count)
+
 -------------------------------------------------------------------------------------------------------------
 
 Requirement 2
